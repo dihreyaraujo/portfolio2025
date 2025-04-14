@@ -50,7 +50,7 @@ const App = () => {
                 />
               </div>
               <h2>Programming <span>& Developing</span></h2>
-              <p className="frase">Criação de sites modernos, responsivos e otimizados.</p>
+              <p className="frase">Desenvolvedor FullStack, e Gamer nas horas vagas.</p>
               <a href={CurriculoDownload} download="Currículo_Dihrey_Araujo.pdf" className="btn">Baixar Currículo</a>
             </div>
           </section>
