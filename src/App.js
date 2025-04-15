@@ -91,7 +91,7 @@ const App = () => {
       <section className="section-wrapper">
         <section id="certificados" className="section">
           <h2>Certificados</h2>
-          <div className="carrossel">
+          <div className="carrossel desktop-carousel">
             <button className="seta" onClick={mostrarAnterior}>&lt;</button>
             <ul className="certificados-lista">
               <li>
@@ -102,6 +102,15 @@ const App = () => {
               </li>
             </ul>
             <button className="seta" onClick={mostrarProximo}>&gt;</button>
+          </div>
+          <div className="carrossel mobile-carousel">
+            <ul className="certificados-lista">
+              {certificados.map((src, index) => (
+                <li key={index}>
+                  <img src={src.src} alt={`Certificado ${index + 1}`} />
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       </section>

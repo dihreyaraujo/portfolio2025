@@ -1,6 +1,30 @@
 /* App.css */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c8b99c;
+  border-radius: 10px;
+  border: 2px solid #111;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e1d4b7;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c8b99c #111;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -264,4 +288,54 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #666;
+}
+
+.mobile-carousel {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .header {
+    display: none;
+  }
+
+  .desktop-carousel {
+    display: none;
+  }
+
+  .mobile-carousel {
+    display: block;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .certificados-lista {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    /* padding: 0 16px; */
+  }
+
+  .certificados-lista li {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  .certificados-lista img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    object-fit: contain;
+  }
+
+  .mobile-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-carousel {
+    scrollbar-width: none;
+  }
 }
